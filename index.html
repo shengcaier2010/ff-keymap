@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〲YT〲PRO | MY FF KEYMAP</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Orbitron', sans-serif;
+    background: #000;
+    color: #fff;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(45deg, #ff0040, #00ff88, #0088ff);
+    background-size: 400% 400%;
+    animation: rgbBG 10s ease infinite;
+    opacity: 0.15;
+    z-index: -1;
+  }
+
+  @keyframes rgbBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  header {
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 3px solid #00ff88;
+    background: rgba(0,0,0,0.8);
+  }
+
+  header h1 {
+    font-size: 3rem;
+    color: #00ff88;
+    text-shadow: 0 0 30px #00ff88;
+    animation: glow 2s infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 20px #ff0040; }
+    to { text-shadow: 0 0 30px #00ff88; }
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  /* 2 PATHI LAYOUT */
+  .keymap-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  @media(max-width: 900px){
+    .keymap-wrapper { grid-template-columns: 1fr; }
+  }
+
+  .key-part {
+    background: rgba(0,0,0,0.9);
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid;
+    box-shadow: 0 0 30px rgba(0,255,136,0.2);
+  }
+
+  .left-part { border-color: #00ff88; }
+  .right-part { border-color: #0088ff; }
+
+  .key-part h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+  }
+
+  .left-part h2 { color: #00ff88; }
+  .right-part h2 { color: #0088ff; }
+
+  /* Keyboard Keys */
+  .key-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 12px 0;
+  }
+
+  .key {
+    width: 80px; height: 80px;
+    background: #222;
+    border: 3px solid #555;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.1rem;
+    transition: 0.3s;
+  }
+
+  .key:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #00ff88;
+  }
+
+  .key.green { background: #00ff88; color: #000; border-color: #00ff88; }
+  .key.blue { background: #0088ff; color: #fff; border-color: #0088ff; }
+  .key.red { background: #ff0040; color: #fff; border-color: #ff0040; }
+  .key.orange { background: #ff8800; color: #000; border-color: #ff8800; }
+  .key.wide { width: 200px; }
+
+  /* Table */
+  .table-box {
+    background: rgba(0,0,0,0.9);
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid #00ff88;
+    margin-top: 30px;
+  }
+
+  .table-box h2 {
+    color: #00ff88;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 15px;
+    border: 2px solid #0088ff;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  th {
+    background: #00ff88;
+    color: #000;
+    font-weight: 900;
+  }
+
+  td { background: #111; }
+
+  .btn {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(45deg, #ff0040, #00ff88, #0088ff);
+    background-size: 200% 200%;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 900;
+    font-family: 'Orbitron';
+    font-size: 1.1rem;
+    cursor: pointer;
+    animation: btnRGB 3s linear infinite;
+    margin-top: 30px;
+  }
+
+  @keyframes btnRGB {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: #00ffff;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🔥Sheng Cai'er</h1>
+  <p style="color:#00ffff; font-size:1.2rem; margin-top:10px;">MY PERSONAL FF KEYMAP SETUP</p>
+</header>
+
+  <!-- FULL TABLE -->
+  <div class="table-box">
+
+<table border="0">
+        <TR><TD colspan="2"><h2>📋 COMPLETE KEYBIND LIST</h2></TD></TR>
+	<TR><TD><a href="https://drive.google.com/file/d/1yqcyEQ3qfmHFATE46d-smh3COsyTmidK/view?usp=sharing">Click Here To Get EMULATOR SETTING</a></TD></TR>
+	<TR><TD><font color="00FF00">FF CUSTOMHUB SETTING CODE :</font> <font color="FF0000">#FFHUDT6O3jr2Ml09Po7eM</font></TD></TR>
+
+    <table>
+      <tr>
+        <th>#</th>
+        <th>ACTION</th>
+        <th>MY KEY</th>
+      </tr>
+	<tr>
+		<td>1</td>
+		<td>Move</td>
+		<td>W , A , S , D</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>JUMP</td>
+		<td>SPACE</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>CROUCH</td>
+		<td>C</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>ZOOM</td>
+		<td>E</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>ACTIVE SKILL SLOT 1</td>
+		<td>V</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>ACTIVE SKILL SLOT 2</td>
+		<td>B</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>MAP</td>
+		<td>M</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>RELOAD</td>
+		<td>R</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>GUN SLOT 1</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>GUN SLOT 2</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>GUN SLOT 3</td>
+		<td>3</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>BAGPACK</td>
+		<td>TAP</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>SPRINT</td>
+		<td>SHIFT</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>GRANADE</td>
+		<td>4</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>EMOTE</td>
+		<td>N ( MACRO ) , 5</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>MED KIT USE</td>
+		<td>X</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>WALL</td>
+		<td>Q</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>HEAL & USE</td>
+		<td>T</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>LEFT FIRE BUTTON</td>
+		<td>F</td>
+	</tr>
+	<tr>
+		<td>20</td>
+		<td>PUCKUP</td>
+		<td>G</td>
+	</tr>
+	<tr>
+		<td>21</td>
+		<td>BUY</td>
+		<td>ALT</td>
+	</tr>
+	<tr>
+		<td>22</td>
+		<td>MOUSE LOCK / UNLCOK</td>
+		<td>CTRL</td>
+	</tr>
+
+    </table>
+  </div>
+
+</div>
+
+<footer>
+  <p>© Sheng Cai'er | MY KEYMAP | DPI: 1200 </p>
+</footer>
+
+</body>
+</html>
